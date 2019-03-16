@@ -33,7 +33,7 @@
 		<div class="ui buttons">
 			<input type="reset" name="limpar" value="Limpar" class="ui button">
 						  <div class="or"></div>
-			<input type="submit" name="cancelar" value="Cadastrar" class="ui positive button">
+			<input type="submit" name="atualizar" value="Atualizar" class="ui positive button">
 		</div>
 	</form>	
 	<br><br>
