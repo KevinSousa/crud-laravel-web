@@ -3,6 +3,9 @@
 <head>
 	<title> ADMIN </title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	
 	<link rel="shortcut icon" href="icon/icon.ico" >
 </head>
 <style type="text/css">
@@ -48,9 +51,25 @@
 			<td> {{ $user -> nome }} </td>
 			<td> {{ $user -> cpf }} </td>
 			<td> <a href="{{route('remover', $user->id)}}"><i class="times icon"></i></a><a href="{{route('editar', $user->id)}}"><i class="pencil alternate icon"></i></a></td>
+			<td> <a href="#" id="{{$user->id}}" class="rm"><i class="times icon"></i></a><a href="{{route('editar', $user->id)}}"><i class="pencil alternate icon"></i></a></td>
 		</tr>
 	@endforeach
 </table>
 </div>
+	<script>
+		$('.rm').on('click', function(event){
+			event.preventDefault();
+			var that = $(this);
+			var userId = $(this).attr('id');
+			$.ajax({
+				url: "http://localhost:8000/remover/"+userId,
+				success: function(){
+					that.parent().parent().remove();
+				}
+			});
+			
+			
+		});
+	</script>
 </body>
 </html>
