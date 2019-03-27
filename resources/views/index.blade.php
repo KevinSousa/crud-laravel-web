@@ -4,12 +4,12 @@
 	<title> ADMIN </title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-	
 	<link rel="shortcut icon" href="icon/icon.ico" >
 </head>
 <style type="text/css">
+
 	@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+	
 	body {
 		padding-top: 50px; 
 		margin-bottom: 100px;
@@ -18,7 +18,7 @@
 </style>
 <body>
 <div class="ui container">
-<h1> CADASTRO </h1>
+<h1> CADASTROs </h1>
 <p> Área de Cadastro dos Funcionários </p>
 <hr>
 <form action="{{route('salvar')}}" method="post" class="ui form">
@@ -26,7 +26,7 @@
 	<label> NOME: </label>
 	<input type="text" required="" name="nome" value="{{isset($user->nome) ? $user->nome : ''}}"><br><br>
 	<label> CPF: </label>
-	<input type="text" required="" name="cpf" value="{{isset($user->cpf) ? $user->cpf : ''}}"><br><br>
+	<input type="text" required="" maxlength="11" name="cpf" value="{{isset($user->cpf) ? $user->cpf : ''}}"><br><br>
 	<div class="ui buttons">
 		<input type="reset" name="limpar" value="Limpar" class="ui button">
 					  <div class="or"></div>
@@ -54,6 +54,7 @@
 		</tr>
 	@endforeach
 </table>
+<button> Gerar PDF </button>
 </div>
 {{-- 	<script>
 		$('.rm').on('click', function(event){

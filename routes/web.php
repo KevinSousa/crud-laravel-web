@@ -20,3 +20,5 @@ Route::post('/salvar', ['as' => 'salvar', 'uses' => 'UsersController@salvar']);
 Route::get('/editar/{id}', ['as' => 'editar', 'uses' => 'UsersController@editar']);
 
 Route::put('/atualizar/{id}',['as'=>'atualizar','uses'=>'UsersController@atualizar']);
+
+Route::get('/pdf',['as'=>'pdf','uses'=>'UsersController@gerarPDF']);

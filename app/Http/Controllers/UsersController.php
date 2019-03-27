@@ -39,4 +39,11 @@ class UsersController extends Controller {
     	return redirect() -> route('home');
     }
 
+    public function gerarPDF(){
+    
+        $usuario = Users::all();
+
+        return \PDF::loadView('pdf', compact('products'))
+                    ->download('nome-arquivo-pdf-gerado.pdf');
+    }
 }

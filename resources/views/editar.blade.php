@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title> Editar </title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css">
 </head>
 <style type="text/css">
@@ -29,7 +29,7 @@
 		<label> NOME: </label>
 		<input type="text" required="" name="nome" value="{{isset($usuario->nome) ? $usuario->nome : ''}}"><br><br>
 		<label> CPF: </label>
-		<input type="text" required="" name="cpf" value="{{isset($usuario->cpf) ? $usuario->cpf : ''}}"><br><br>
+		<input type="text" required="" maxlength="11" name="cpf" value="{{isset($usuario->cpf) ? $usuario->cpf : ''}}"><br><br>
 		<div class="ui buttons">
 			<input type="reset" name="limpar" value="Limpar" class="ui button">
 						  <div class="or"></div>
