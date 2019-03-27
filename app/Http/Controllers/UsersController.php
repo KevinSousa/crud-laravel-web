@@ -41,9 +41,9 @@ class UsersController extends Controller {
 
     public function gerarPDF(){
     
-        $usuario = Users::all();
+        $users = Users::all();
 
-        return \PDF::loadView('pdf', compact('products'))
-                    ->download('nome-arquivo-pdf-gerado.pdf');
+        return \PDF::loadView('index', compact('users'))
+                    ->stream();
     }
 }

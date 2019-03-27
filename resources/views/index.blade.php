@@ -54,9 +54,9 @@
 		</tr>
 	@endforeach
 </table>
-<button> Gerar PDF </button>
+<a href="{{route('pdf')}}" target="_blank"><button> Gerar PDF </button></a>
 </div>
-{{-- 	<script>
+<!-- {{-- 	<script>
 		$('.rm').on('click', function(event){
 			event.preventDefault();
 			var that = $(this);
@@ -68,6 +68,6 @@
 				}
 			});
 		});
-	</script> --}}
+	</script> --}} -->
 </body>
 </html>
