@@ -18,7 +18,7 @@
 </style>
 <body>
 <div class="ui container">
-<h1> CADASTROs </h1>
+<h1> CADASTRO </h1>
 <p> Área de Cadastro dos Funcionários </p>
 <hr>
 <form action="{{route('salvar')}}" method="post" class="ui form">
@@ -34,7 +34,7 @@
 	</div>
 </form>	
 
-<h1> LISTA DE FUNCIONARIOS </h1>
+<h1> LISTA DE FUNCIONÁRIOS </h1>
 <p> Lista dos Funcionários cadastrados</p>
 <hr>
 <table class="ui celled table">
@@ -54,7 +54,7 @@
 		</tr>
 	@endforeach
 </table>
-<a href="{{route('pdf')}}" target="_blank"><button> Gerar PDF </button></a>
+<a href="{{route('pdf')}}" target="_blank"><button class="ui button"> Gerar PDF </button></a>
 </div>
 <!-- {{-- 	<script>
 		$('.rm').on('click', function(event){

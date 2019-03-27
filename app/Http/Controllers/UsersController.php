@@ -42,8 +42,8 @@ class UsersController extends Controller {
     public function gerarPDF(){
     
         $users = Users::all();
+        $pdf = \PDF::loadView('pdf', compact('users'));
+        return $pdf -> stream();
 
-        return \PDF::loadView('index', compact('users'))
-                    ->stream();
     }
 }
