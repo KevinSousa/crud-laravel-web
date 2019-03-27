@@ -51,12 +51,11 @@
 			<td> {{ $user -> nome }} </td>
 			<td> {{ $user -> cpf }} </td>
 			<td> <a href="{{route('remover', $user->id)}}"><i class="times icon"></i></a><a href="{{route('editar', $user->id)}}"><i class="pencil alternate icon"></i></a></td>
-			<td> <a href="#" id="{{$user->id}}" class="rm"><i class="times icon"></i></a><a href="{{route('editar', $user->id)}}"><i class="pencil alternate icon"></i></a></td>
 		</tr>
 	@endforeach
 </table>
 </div>
-	<script>
+{{-- 	<script>
 		$('.rm').on('click', function(event){
 			event.preventDefault();
 			var that = $(this);
@@ -67,9 +66,7 @@
 					that.parent().parent().remove();
 				}
 			});
-			
-			
 		});
-	</script>
+	</script> --}}
 </body>
 </html>

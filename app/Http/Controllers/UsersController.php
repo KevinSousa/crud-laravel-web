@@ -36,7 +36,7 @@ class UsersController extends Controller {
 
     public function remover($id){
     	Users::find($id) -> delete();
-    	return $id;
+    	return redirect() -> route('home');
     }
 
 }
